@@ -1,0 +1,199 @@
+/*root se equipara à raíz de uma árvore, Aplicado ao HTML, :root representa o elemento <html>*/
+/* -- = representa variavies*/
+:root {
+    --branco-principal: #ffffff;
+    --cinza-secundario: #c0c0c0;
+    --botao-azul: #167bf7;
+    --cor-de-fundo: #00030c;
+    /* nome da fonte = inter o nome que esta no site*/
+    --font-principal: 'inter';
+    --botao-azul-efeito: #3b91fa;
+}
+
+body {
+    /*Utilizamos essa propriedade para alterar a cor do plano de fundo*/
+    background-color: var(--cor-de-fundo);
+    /*Utilizamos essa propriedade para alterar a cor da fonte*/
+    color: var(--branco-principal);
+    /*Chama o modelo fa fonte*/
+    font-family: var(--font-principal);
+    /*utilizada para definir o tamanho da fonte*/
+    font-size: 16px;
+    /*utilizada para deixar em negrito*/
+    font-weight: 400;
+
+}
+
+    /*O seletor "*" pega todos os elementos do CSS*/
+* {
+    /*O margin é usado quando você quer dar um espaçamento contando da borda para fora do elemento. Já o padding é da borda para o seu contéudo*/
+    margin: 0;
+    padding: 0;
+}
+
+.principal {
+    /* background-image = Serve para inserir imagem na pagina apenas para aparencia, sem precisar inserir o alt(texto alternativo)*/
+    background-image: url("img/Background.png");
+    /*background-repeat = Serve para não repetir a imagem na pagina*/
+    background-repeat: no-repeat;
+    /*background-size = Serve para especificar o tamanho da imagem na pagina, ocupando total ou parcial*/
+    /* Contain = A imagem é renderizada, preservando sua proporção intrínseca, com o maior tamanho contido, ou cobrindo a área do elemento pai*/
+    background-size: contain;   
+    /*controla o alinhamento de todos os itens no eixo transversal*/
+    align-items: center;
+    /*Alinha não somente o texto, mas todo o conteudo dentro do bloco*/
+    text-align: center;    
+
+}
+
+.container {
+    /*O height é referente a altura e vh o tamanho*/
+    height: 100vh;    
+    /*Grid Layout introduz um sistema bi-dimensional de grid (literalmente "grades")*/
+    display: grid;
+    /*grid-template-columns do CSS define os nomes das linhas e funções de dimensionamento*/
+    grid-template-columns: 50% 50%;
+}
+
+
+.container__botao {
+    /*estilizar o botão de link*/
+    background-color: var(--botao-azul);
+    /*destina-se a definir bordas arredondadas*/
+    border-radius: 5px;
+    /*padding define uma a distância entre o conteúdo de um elemento e suas bordas*/
+    padding: 1em;
+    /*defini a cor da font*/
+    color: var(--branco-principal);
+    /*display: block faz com que o elemento HTML seja renderizado como bloco, tal como os parágrafos e os cabeçalhos o são*/
+    display: block;
+    /*text-decoration : none : tira o estilo sublinado da linha*/
+    text-decoration: none;
+    /*margin-bottom define a margin area na parte inferior de um elemento*/
+    margin-bottom: 1em;
+}
+
+.botao_secundario {
+    background-color: transparent;
+    border: 2px solid var(--branco-principal);   
+}
+
+.container__aviso {
+    /*utilizada para definir o tamanho da fonte*/
+    font-size: 12px;
+    /*Utilizamos essa propriedade para alterar a cor da fonte*/
+    color: var(--cinza-secundario);
+}
+
+.container__titulo {
+    /*utilizada para definir o tamanho da fonte*/
+    font-size: 28px;
+    /*Utilizamos essa propriedade para alterar a cor da fonte*/
+    color: var(--branco-principal);
+}
+ 
+.container__imagem {
+    /*Espaçamento da imagem 1em= altura 0=direito 2em= baixo 0=esquero*/
+    margin: 1em 0 2em 0;
+}
+
+.container__caixa {
+    margin: 0 6em;
+}
+
+.secundario__imagem {
+    /*width determina a largura da área de conteúdo de um elemento. A área de conteúdo fica dentro do preenchimento, da borda, e da margem de um elemento.*/
+    width: 80%;
+
+}
+
+.secundario {
+    /*align-items — controla o alinhamento de todos os itens no eixo transversal.*/
+    align-items: center;
+    margin: 0 10em;
+
+}
+
+.descricao__titulo {
+    font-weight: 700;
+    font-size: 48px;
+    color: var(--branco-principal);
+    margin-bottom: 0.1em;
+}
+
+.descricao__texto {
+    color: var(--cinza-secundario);
+}
+
+.secundario__botao {
+     /*inline-block: exibe um elemento HTML como um contêiner de bloco de nível inline. O interior deste bloco é formatado como caixa de nível de bloco e o elemento em si é formatado como uma caixa de nível in-line.*/
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.container__descricao {
+
+    padding: 2em;
+    
+}
+
+.dispositivos__lista {
+     /*display flex = organizar as imagens do container uma do lado da outra.*/
+     display: flex;
+     justify-content: center;   
+     /*list-style-type none = tira os pontos da lista.*/
+     list-style-type: none;
+     margin: 5em 0;
+
+
+
+}
+
+.dispositivos { 
+    text-align: center;
+}
+
+.dispositivos__titulo {
+    font-size: 48px;
+    color: var(--branco-principal);
+}
+
+.lista__item {
+    font-size: 32px;
+    color: var(--branco-principal);
+}
+
+.rodape {
+    text-align: center;
+    margin: 5em 3em;
+}
+
+.rodape__lista {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 1em;
+}
+.lista__link a{
+    text-decoration: none;
+    color: var(--branco-principal);
+    margin-left: 1em;
+}
+
+.rodape__texto {
+    margin: 1em 0;
+    color: var(--cinza-secundario);
+    font-size: 14px;
+}
+
+.lista__link a:hover {
+    color: var(--botao-azul);
+}
+
+.lista__link a:active {
+    color: purple;
+}
+
+.container__botao:hover {
+    background-color: var(--botao-azul-efeito);
+    color: var(--cor-de-fundo);}
